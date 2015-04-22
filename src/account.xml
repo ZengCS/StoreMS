@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- *****************************用户管理***************************** -->
+	<package name="account" namespace="/account" extends="progenitor">
+		<!-- <interceptors>
+			<interceptor name="myInterceptor"
+				class="com.zcs.storems.interceptor.AccountInterceptor" />
+			<interceptor-stack name="myStack">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="myInterceptor" />
+			</interceptor-stack>
+		</interceptors> -->
+		<action name="*_*" class="accountAction" method="{2}">
+			<result name="success" type="redirect">/page/account/account.jsp</result>
+			<result name="loginSuccess" type="redirect">/page/home/Home_index.jsp</result>
+			<result name="input" type="redirect">/error.jsp</result>
+			<result name="loginFailed" type="redirect">/login.jsp</result>
+		</action>
+	</package>
+</struts>

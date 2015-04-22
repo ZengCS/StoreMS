@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<!-- 用户管理 -->
+	<bean id="accountAction" class="com.zcs.storems.admin.action.AccountAction" scope="prototype">
+		<property name="accountService" ref="accountService" />
+	</bean>
+	
+	<!-- 商品管理 -->
+	<bean id="goodsAction" class="com.zcs.storems.goods.action.GoodsAction" scope="prototype">
+		<property name="goodsService" ref="goodsService" />
+	</bean>
+	
+	<!-- 在库管理 -->
+	<bean id="atstoreAction" class="com.zcs.storems.atstore.action.AtstoreAction" scope="prototype">
+		<property name="atstoreService" ref="atstoreService" />
+		<property name="goodsService" ref="goodsService" />
+	</bean>
+	
+	<!-- 出库管理 -->
+	<bean id="outstoreAction" class="com.zcs.storems.outstore.action.OutstoreAction" scope="prototype">
+		<property name="outstoreService" ref="outstoreService" />
+		<property name="goodsService" ref="goodsService" />
+		<property name="partnerService" ref="partnerService" />
+		<property name="accountService" ref="accountService" />
+		<property name="atstoreService" ref="atstoreService" />
+	</bean>
+	
+	<!-- 入库管理 -->
+	<bean id="instoreAction" class="com.zcs.storems.instore.action.InstoreAction" scope="prototype">
+		<property name="instoreService" ref="instoreService" />
+		<property name="goodsService" ref="goodsService" />
+		<property name="partnerService" ref="partnerService" />
+		<property name="accountService" ref="accountService" />
+		<property name="atstoreService" ref="atstoreService" />
+	</bean>
+	
+	<!-- 统计管理 -->
+	<bean id="statisticalAction" class="com.zcs.storems.admin.action.StatisticalAction" scope="prototype">
+		<property name="instoreService" ref="instoreService" />
+		<property name="outstoreService" ref="outstoreService" />
+		<property name="goodsService" ref="goodsService" />
+	</bean>
+	
+	<!-- 合作伙伴管理 -->
+	<bean id="partnerAction" class="com.zcs.storems.partner.action.PartnerAction" scope="prototype">
+		<property name="partnerService" ref="partnerService" />
+	</bean>
+</beans>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd"
+	default-lazy-init="false">
+
+	<!-- 用户管理 -->
+	<bean id="accountDao" class="com.zcs.storems.admin.dao.impl.AccountDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="accountService" class="com.zcs.storems.admin.service.impl.AccountServiceImpl">
+		<property name="accountDao" ref="accountDao" />
+	</bean>
+
+	<!-- 商品管理 -->
+	<bean id="goodsDao" class="com.zcs.storems.goods.dao.impl.GoodsDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="goodsService" class="com.zcs.storems.goods.service.impl.GoodsServiceImpl">
+		<property name="goodsDao" ref="goodsDao" />
+	</bean>
+
+	<!-- 在库管理 -->
+	<bean id="atstoreDao" class="com.zcs.storems.atstore.dao.impl.AtstoreDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="atstoreService" class="com.zcs.storems.atstore.service.impl.AtstoreServiceImpl">
+		<property name="atstoreDao" ref="atstoreDao" />
+	</bean>
+
+	<!-- 出库管理 -->
+	<bean id="outstoreDao" class="com.zcs.storems.outstore.dao.impl.OutstoreDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="outstoreService" class="com.zcs.storems.outstore.service.impl.OutstoreServiceImpl">
+		<property name="outstoreDao" ref="outstoreDao" />
+	</bean>
+
+	<!-- 入库管理 -->
+	<bean id="instoreDao" class="com.zcs.storems.instore.dao.impl.InstoreDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="instoreService" class="com.zcs.storems.instore.service.impl.InstoreServiceImpl">
+		<property name="instoreDao" ref="instoreDao" />
+	</bean>
+
+	<!-- 合作伙伴管理 -->
+	<bean id="partnerDao" class="com.zcs.storems.partner.dao.impl.PartnerDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="partnerService" class="com.zcs.storems.partner.service.impl.PartnerServiceImpl">
+		<property name="partnerDao" ref="partnerDao" />
+	</bean>
+</beans>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- *****************************用户管理***************************** -->
+	<package name="outstore" namespace="/outstore" extends="progenitor">
+		<action name="*_*" class="outstoreAction" method="{2}">
+			<result name="success" type="redirect">/page/outstore/outstore.jsp</result>
+		</action>
+	</package>
+</struts>

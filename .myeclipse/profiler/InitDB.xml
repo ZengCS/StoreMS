@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key="profiler.settings.instrument.empty.methods">true</entry>
+<entry key="ProfilerCPUSettings_profile_runnables">true</entry>
+<entry key="ProfilerCPUSettings_filter_type">2</entry>
+<entry key="ProfilerMemorySettings_track_every">10</entry>
+<entry key="ProfilerMemorySettings_mode">4</entry>
+<entry key="ProfilerCPUSettings_root_classes">com.zcs.storems.admin.action.**
+com.zcs.storems.admin.dao.**
+com.zcs.storems.admin.domain.**
+com.zcs.storems.admin.service.**
+com.zcs.storems.atstore.action.**
+com.zcs.storems.atstore.dao.**
+com.zcs.storems.atstore.domain.**
+com.zcs.storems.atstore.service.**
+com.zcs.storems.filter.**
+com.zcs.storems.goods.action.**
+com.zcs.storems.goods.dao.**
+com.zcs.storems.goods.domain.**
+com.zcs.storems.goods.service.**
+com.zcs.storems.instore.action.**
+com.zcs.storems.instore.dao.**
+com.zcs.storems.instore.domain.**
+com.zcs.storems.instore.service.**
+com.zcs.storems.interceptor.**
+com.zcs.storems.outstore.action.**
+com.zcs.storems.outstore.dao.**
+com.zcs.storems.outstore.domain.**
+com.zcs.storems.outstore.service.**
+com.zcs.storems.partner.action.**
+com.zcs.storems.partner.dao.**
+com.zcs.storems.partner.domain.**
+com.zcs.storems.partner.service.**
+com.zcs.storems.test.**
+com.zcs.storems.util.**
+</entry>
+<entry key="ProfilerCPUSettings_filter_value">com.zcs.storems.admin.action.*,
+com.zcs.storems.admin.dao.*,
+com.zcs.storems.admin.domain.*,
+com.zcs.storems.admin.service.*,
+com.zcs.storems.atstore.action.*,
+com.zcs.storems.atstore.dao.*,
+com.zcs.storems.atstore.domain.*,
+com.zcs.storems.atstore.service.*,
+com.zcs.storems.filter.*,
+com.zcs.storems.goods.action.*,
+com.zcs.storems.goods.dao.*,
+com.zcs.storems.goods.domain.*,
+com.zcs.storems.goods.service.*,
+com.zcs.storems.instore.action.*,
+com.zcs.storems.instore.dao.*,
+com.zcs.storems.instore.domain.*,
+com.zcs.storems.instore.service.*,
+com.zcs.storems.interceptor.*,
+com.zcs.storems.outstore.action.*,
+com.zcs.storems.outstore.dao.*,
+com.zcs.storems.outstore.domain.*,
+com.zcs.storems.outstore.service.*,
+com.zcs.storems.partner.action.*,
+com.zcs.storems.partner.dao.*,
+com.zcs.storems.partner.domain.*,
+com.zcs.storems.partner.service.*,
+com.zcs.storems.test.*,
+com.zcs.storems.util.*</entry>
+<entry key="profiler.settings.istrument.getter.setter.methods">true</entry>
+<entry key="myeclipse.profiling.mode">0</entry>
+<entry key="ProfilerMemorySettings_stacktraces">-1</entry>
+</properties>
